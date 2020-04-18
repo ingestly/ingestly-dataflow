@@ -1,0 +1,622 @@
+[
+    {
+        "name": "timestamp",
+        "type": "TIMESTAMP",
+        "mode": "REQUIRED"
+    },
+    {
+        "name": "sdk_version",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "sdk_api_key",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "endpoint_version",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "action",
+        "type": "STRING",
+        "mode": "REQUIRED"
+    },
+    {
+        "name": "category",
+        "type": "STRING",
+        "mode": "REQUIRED"
+    },
+        {
+        "name": "cookie",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "consent",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "request_id",
+        "type": "STRING",
+        "mode": "REQUIRED"
+    },
+    {
+        "name": "ingestly_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "session_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "is_id_new",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "is_session_new",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "root_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "since_init_ms",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "since_prev_ms",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "client_ip",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "user_agent",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "user_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "user_status",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "user_attr",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "page_url",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "page_referrer",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "page_title",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "page_attr",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "content_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "content_headline",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "content_status",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "content_attr",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "viewport_height",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "viewport_width",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "screen_height",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "screen_width",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "screen_orientation",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "device_type",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "device_os",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "device_platform",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "timing_interactive",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "timing_dcl",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "timing_complete",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "timing_elapsed_ms",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "navigation_type",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "navigation_redirect_count",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "page_height",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "scroll_depth",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "scroll_unit",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "read_target_index",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "read_target_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "read_text_start_with",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "read_rate",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "read_text_length",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "read_content_height",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "read_attr",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "click_tag",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "click_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "click_class",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "click_path",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "click_link",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "click_text",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "click_attr",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "media_src",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "media_current_time",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "media_duration",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "media_played_percent",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "media_attr",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "form_name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "form_items",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "form_first_item",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "form_last_item",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "form_started_since_init_ms",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "form_ended_since_init_ms",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "form_duration_ms",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "form_attr",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "campaign_code",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "campaign_name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "campaign_source",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "campaign_medium",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "campaign_term",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "campaign_content",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "url_protocol",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "url_hostname",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "url_pathname",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "url_search",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "url_hash",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "url_query",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "referrer_protocol",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "referrer_hostname",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "referrer_pathname",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "referrer_search",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "referrer_hash",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "referrer_query",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "survey_name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "survey_result",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "o2o_name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "o2o_scanner",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "o2o_key",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "o2o_result",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "custom_attr",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "is_tls",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "is_ipv6",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "request_accept_language",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "request_accept_charset",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "request_referer",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "geo_continent_code",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "geo_region",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "geo_country_name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "geo_country_code",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "geo_city",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "geo_latitude",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "geo_longitude",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "geo_gmt_offset",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "geo_conn_speed",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "server_datacenter",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "server_region",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "er_ua_device_family",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "er_ua_device_brand",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "er_ua_device_model",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "er_ua_browser_family",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "er_ua_browser_version_string",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "er_ua_os_family",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "er_ua_os_version_string",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "er_ua_is_mobile",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "er_ua_is_tablet",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "er_ua_is_bot",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    }
+]
