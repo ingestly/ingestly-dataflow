@@ -14,7 +14,10 @@
 3. Open a Console within Notebook then execute the following command to install required modules:
 
     ```sh
-    !pip install PyYAML ua-parser user-agents
+    pip install PyYAML ua-parser user-agents
+    pip install google-cloud-pubsub
+    pip install apache-beam
+    pip install apache-beam[gcp]
     ```
 
 4. Define some variables in `ingestly_enrichment.py`:
@@ -31,5 +34,5 @@
 5. Then, run the script and make a Dataflow job by:
 
     ```sh
-    python ingestly_enrichment.py --machine_type n1-standard-1 --job_name ingestly_enrichment
+    python ingestly_enrichment.py --save_main_session --machine_type n1-standard-1 --job_name ingestly-enrichment
     ```
