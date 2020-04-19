@@ -4,14 +4,14 @@ from apache_beam.io.gcp.pubsub import ReadFromPubSub
 from apache_beam.io.gcp.bigquery import WriteToBigQuery
 
 # Settings
-project = 'PROJECT'
-subscription = 'PUBSUB_SUBSCRIPTION'
-region = 'REGION'
-bucket = 'GCS_BUCKET'
-database = 'BQ_DATABASE'
-table = 'BQ_TABLE'
+PROJECT = 'GCP_PROJECT'
+SUBSCRIPTION = 'PUBSUB_SUBSCRIPTION'
+REGION = 'GCP_REGION'
+BUCKET = 'GCS_BUCKET'
+DATABASE = 'BQ_DATABASE'
+TABLE = 'BQ_TABLE'
 
-# Options
+# Define options
 opt = StandardOptions()
 opt.streaming = True
 opt.runner = 'DataflowRunner'
@@ -20,14 +20,14 @@ stp = opt.view_as(SetupOptions)
 stp.requirements_file = "./requirements.txt"
 
 gcp = opt.view_as(GoogleCloudOptions)
-gcp.project = project
-gcp.region = region
-gcp.staging_location = 'gs://{bucket}/staging'.format(bucket=bucket)
-gcp.temp_location = 'gs://{bucket}/temp'.format(bucket=bucket)
+gcp.project = PROJECT
+gcp.region = REGION
+gcp.staging_location = 'gs://{bucket}/staging'.format(bucket=BUCKET)
+gcp.temp_location = 'gs://{bucket}/temp'.format(bucket=BUCKET)
 
 # Initialize a subscriber
 subs = ReadFromPubSub(subscription='projects/{project}/subscriptions/{subscription}'.format(
-    project=project, subscription=subscription)
+    project=PROJECT, subscription=SUBSCRIPTION)
 )
 
 
@@ -62,7 +62,7 @@ pipeline = beam.Pipeline(options=opt)
         | 'subscribe' >> subs
         | 'modify' >> beam.Map(enrichment)
         | 'write_to_bq' >> WriteToBigQuery(
-            '{project}:{database}.{table}'.format(project=project, database=database, table=table)
+            '{project}:{database}.{table}'.format(project=PROJECT, database=DATABASE, table=TABLE)
         )
 )
 pipeline.run()
