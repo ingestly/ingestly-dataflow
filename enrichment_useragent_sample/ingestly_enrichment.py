@@ -25,6 +25,11 @@ gcp.region = REGION
 gcp.staging_location = 'gs://{bucket}/staging'.format(bucket=BUCKET)
 gcp.temp_location = 'gs://{bucket}/temp'.format(bucket=BUCKET)
 
+# Initialize a subscriber
+subs = ReadFromPubSub(subscription='projects/{project}/subscriptions/{subscription}'.format(
+    project=PROJECT, subscription=SUBSCRIPTION)
+)
+
 
 # Enrichment Function
 def enrichment(text):
@@ -54,9 +59,7 @@ def enrichment(text):
 pipeline = beam.Pipeline(options=opt)
 (
         pipeline
-        | 'subscribe' >> ReadFromPubSub(subscription='projects/{project}/subscriptions/{subscription}'.format(
-            project=PROJECT, subscription=SUBSCRIPTION)
-        )
+        | 'subscribe' >> subs
         | 'modify' >> beam.Map(enrichment)
         | 'write_to_bq' >> WriteToBigQuery(
             '{project}:{database}.{table}'.format(project=PROJECT, database=DATABASE, table=TABLE)
